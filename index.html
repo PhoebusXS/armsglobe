@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>Interactive Globe: Small Arms Imports &amp; Exports</title>
+		<title>Customer Threat Map</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -11,7 +11,7 @@
 	<body onload="start()" id="dataviz" class="">
 		<div id="wrapper">
 		<div id="loading">
-			<h2>Loading Small Arms and Ammunition Trade Data from 1992 to 2010. Please wait...</h2>
+			<h2>Loading raw malicious traffic logs. Please wait...</h2>
 		</div>
 
 		<div >
@@ -141,17 +141,16 @@
 
 		<!-- All other hud can go here-->
         <div id="hudHeader" class="overlayCountries noPointer">
-            <h1 class="noPointer">Small Arms and Ammunition — Imports & Exports
-                <div class="subtitle">An interactive visualization of government-authorized small arms and ammunition transfers from 1992 to 2010. </div>
+            <h1 class="noPointer">Customer Threat Map
+                <div class="subtitle">An interactive visualization of incoming malicious traffic.</div>
 			</h1>
         </div>
 
 		<div class="overlayCountries noPointer" id="hudButtons">
             <input type="button" value="SEARCH" class="searchBtn armsBtn pointer">
-            <input type="text" name="country" class="countryTextInput pointer noMapDrag" value="UNITED STATES">
-            <input type="button" value="—" class="zoomBtn zoomOutBtn armsBtn pointer noMapDrag">
-            <input type="button" value="+" class="zoomBtn zoomInBtn armsBtn pointer noMapDrag">
-            <input type="button" value="ABOUT" class="aboutBtn armsBtn pointer"><br class="clear" />
+            <input type="text" name="country" class="countryTextInput pointer noMapDrag" value="SINGAPORE">
+            <!-- <input type="button" value="—" class="zoomBtn zoomOutBtn armsBtn pointer noMapDrag"> -->
+            <!-- <input type="button" value="+" class="zoomBtn zoomInBtn armsBtn pointer noMapDrag"> -->
         </div>
         <div id="history" class="overlayCountries noPointer">
             <div class="graph">
@@ -189,38 +188,35 @@
         <div id="graphIcon" class="overlayCountries"></div>
         <div id="importExportBtns" class="overlayCountries">
             <div class="typeLabels">
-                <div class="mil">Military</div>
-                <div class="civ">Civilian</div>
-                <div class="ammo">Ammo</div><br class="clear">
+                <div class="mil">PortScan</div>
+                <div class="civ">ExploitScan</div>
+                <div class="ammo">Whatever</div><br class="clear">
             </div>
             <div class="imports imex">
                 <div class="mil"><div class="check"></div></div>
                 <div class="civ"><div class="check"></div></div>
                 <div class="ammo"><div class="check"></div></div>
-                <div class="label">Imports</div><br class="clear">
+                <div class="label">Alerts</div><br class="clear">
+            </div>
+            <div class="typeLabelsAlt">
+                <div class="mil">Malware</div>
+                <div class="civ">BruteForce</div>
+                <div class="ammo">Injection</div><br class="clear">
             </div>
             <div class="exports imex">
                 <div class="mil"><div class="check"></div></div>
                 <div class="civ"><div class="check"></div></div>
                 <div class="ammo"><div class="check"></div></div>
-                <div class="label">Exports</div><br class="clear">
+                <div class="label">Attacks</div><br class="clear">
             </div>
+<!--             <div class="typeLabelsReverse">
+                <div class="mil">Malware</div>
+                <div class="civ">BruteForce</div>
+                <div class="ammo">Injection</div><br class="clear">
+            </div> -->
             <br class="clear" />
         </div>
 
-        <div id="aboutContainer" class='overlayCountries'>
-            <div class="arrowUp"></div>
-            <div id="aboutBox">
-                <div class="title">Information about the data</div>
-                <div class="text">
-                    This data visualization was produced by Google as part of the <a href="http://www.google.com/ideas" target="_blank">Google Ideas</a> INFO (Illicit Networks, Forces in Opposition) Summit with support from the <a href="http://igarape.org.br/" target="_blank">Igarape Institute</a> and data provided by the <a href="http://www.prio.no/" target="_blank">Peace Research Institute Oslo (PRIO)</a> small arms database. The visualization includes >1 million individual import and export data points from annual custom reports and maps the transfer of small arms, light weapons and ammunition across 250 nation states and territories around the world between 1992 and 2010.
-                </div>
-                <div class="links">
-                	<br>
-                    For more info, please see the <a href="http://igarape.org.br/armsglobe" target="_blank">FAQs</a>.
-                </div>
-            </div>
-        </div>
     </div>
 	</body>
 </html>

@@ -209,7 +209,7 @@ Elements to control the title and country selector
 #hudButtons .countryTextInput {
     float:                  right;
     font-size: 				17px;
-    width: 					300px;
+    width: 					120px;
     margin-right: 			5px;
 	font-family: 			'RopaSans';
 	text-transform:          uppercase;
@@ -274,7 +274,7 @@ Bar graph on left
 */
 #barGraph {
     position: absolute;
-    /*bottom:10px;*/
+    bottom:0;
     left:-7px;
     opacity: 0.9;
 }
@@ -427,15 +427,15 @@ Bar graph on left
 
 /* import export buttons (bottom right)*/
 #importExportBtns {
-    width:                  298px;
+    width:                  378px;
     position:               absolute;
-    bottom:                 0px;
+    bottom:                 0;
     color:                  white;
     display:                none;
 }
 #importExportBtns>div>div {
     float:                  left;
-    width:                  60px;
+    width:                  80px;
     text-align:             center;
     height:                 28px;
 }
@@ -443,6 +443,12 @@ Bar graph on left
     background:             #262626;
 }
 #importExportBtns .typeLabels div {
+    font-family:            'Roboto';
+    font-size:              13px;
+    text-transform:         uppercase;
+    margin-bottom:-12px;
+}
+#importExportBtns .typeLabelsAlt div {
     font-family:            'Roboto';
     font-size:              13px;
     text-transform:         uppercase;
@@ -582,9 +588,10 @@ Bar graph on left
 
 
 /* Small size */
-@media all and (max-width: 1395px) {
+@media all and (max-width: 1500px) {
     #importExportBtns {
         width: 187px;
+        bottom: 0;
     }
     #importExportBtns>div>div {
         width: 23px;
@@ -603,6 +610,22 @@ Bar graph on left
         -ms-transform:rotate(323deg);
         margin-top: -2px;
     }
+/*    #importExportBtns .typeLabelsAlt div {
+        font-size: 12px;
+        -webkit-transform:rotate(42deg);
+        -moz-transform:rotate(42deg);
+        -o-transform:rotate(42deg);
+        -ms-transform:rotate(42deg);
+        margin-top: -2px;
+    }*/
+    #importExportBtns .typeLabelsAlt div {
+        font-size: 12px;
+        -webkit-transform:rotate(323deg);
+        -moz-transform:rotate(323deg);
+        -o-transform:rotate(323deg);
+        -ms-transform:rotate(323deg);
+        margin-top: 15px;
+    }
     
     #importExportBtns .typeLabels .mil {
         margin-left: 8px;
@@ -611,6 +634,15 @@ Bar graph on left
         margin-left: 2px;
     }
     #importExportBtns .typeLabels .ammo {
+        margin-left: -1px;
+    }
+    #importExportBtns .typeLabelsAlt .mil {
+        margin-left: 8px;
+    }
+    #importExportBtns .typeLabelsAlt .civ {
+        margin-left: 2px;
+    }
+    #importExportBtns .typeLabelsAlt .ammo {
         margin-left: -1px;
     }
 }
