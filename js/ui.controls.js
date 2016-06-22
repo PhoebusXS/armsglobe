@@ -760,12 +760,12 @@ var d3Graphs = {
         exportTotalLabel.text(abbreviateNumber(exportTotal)).attr('visibility',exportsVisible ? "visible":"hidden");
         //Import label at bottom
         var importLabel = this.barGraphSVG.selectAll('text.importLabel').data([1]);
-        importLabel.enter().append('text').attr('x',midX).attr('text-anchor','end').text('IMPORTS')
+        importLabel.enter().append('text').attr('x',midX).attr('text-anchor','end').text('ALERTS')
             .attr('class','importLabel').attr('y', this.barGraphHeight - this.barGraphBottomPadding + 45);
         importLabel.attr('visibility',importsVisible ? "visible":"hidden");
         //Export label at bottom
         var exportLabel = this.barGraphSVG.selectAll('text.exportLabel').data([1]);
-        exportLabel.enter().append('text').attr('x',midX+10).text('EXPORTS')
+        exportLabel.enter().append('text').attr('x',midX+10).text('ATTACKS')
             .attr('class','exportLabel').attr('y', this.barGraphHeight - this.barGraphBottomPadding + 45);
         exportLabel.attr('visibility',exportsVisible ? "visible":"hidden")        
     },

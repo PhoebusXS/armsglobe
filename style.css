@@ -427,7 +427,7 @@ Bar graph on left
 
 /* import export buttons (bottom right)*/
 #importExportBtns {
-    width:                  378px;
+    width:                  470px;
     position:               absolute;
     bottom:                 0;
     color:                  white;
@@ -435,7 +435,7 @@ Bar graph on left
 }
 #importExportBtns>div>div {
     float:                  left;
-    width:                  80px;
+    width:                  110px;
     text-align:             center;
     height:                 28px;
 }
@@ -588,7 +588,7 @@ Bar graph on left
 
 
 /* Small size */
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1800px) {
     #importExportBtns {
         width: 187px;
         bottom: 0;
