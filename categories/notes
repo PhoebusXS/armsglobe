@@ -1,0 +1,18 @@
+categories:
+Authorized Scanning / Penetration Testing
+Denial of Service (DoS)
+Usage	Improper Usage
+Investigation
+Malicious Code
+Scans/Probes/Attempted Access
+Unauthorized Access
+
+Alerts Import
+	dos mil  Dos
+	inv civ  Investigation
+	imp ammo Improper Usage
+
+Attacks Export
+	int mil  Intrusion
+	mal civ  Malware
+	pro ammo Probes
