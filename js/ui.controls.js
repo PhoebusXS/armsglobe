@@ -641,7 +641,7 @@ var d3Graphs = {
                     return fontSizeInterpolater((d.amount-minImExAmount)/(maxImExAmount - minImExAmount));
                 });
                 var textLabel = importLabel.append('text').text(function(d) {
-                    return importReverseWeaponLookup[d.type].split(' ')[0].toUpperCase();
+                    return importReverseWeaponLookup[d.type].split('X')[0].toUpperCase();
                 }).attr('text-anchor','end').attr('y',15).attr('class',function(d) { return 'import '+d.type});
                 labelHeight = fontSizeInterpolater((data.amount-minImExAmount)/(maxImExAmount-minImExAmount));
                 labelBGYPos = -labelHeight;
@@ -658,9 +658,9 @@ var d3Graphs = {
                     return fontSizeInterpolater((d.amount-minImExAmount)/(maxImExAmount - minImExAmount));
                 }).attr('y',-7);
                 var textLabel = importLabel.append('text').text(function(d) {
-                    return importReverseWeaponLookup[d.type].split(' ')[0].toUpperCase();
+                    return importReverseWeaponLookup[d.type].split('X')[0].toUpperCase();
                 }).attr('text-anchor','end').attr('y',8).attr('class',function(d) { return 'import '+d.type});
-                var weaponLabel  =importLabel.append('text').text('WEAPONS').attr('text-anchor','end').attr('y',21)
+                var weaponLabel  =importLabel.append('text').text('').attr('text-anchor','end').attr('y',21)
                     .attr('class',function(d) { return'import '+d.type} );
                 labelHeight = fontSizeInterpolater((data.amount-minImExAmount)/(maxImExAmount-minImExAmount));
                 labelBGYPos = -labelHeight - 7;
@@ -731,7 +731,7 @@ var d3Graphs = {
                     return fontSizeInterpolater((d.amount-minImExAmount)/(maxImExAmount - minImExAmount));
                 });
                 var textLabel = exportLabel.append('text').text(function(d) {
-                    return exportReverseWeaponLookup[d.type].split(' ')[0].toUpperCase();
+                    return exportReverseWeaponLookup[d.type].split('X')[0].toUpperCase();
                 }).attr('text-anchor','start').attr('y',15).attr('class',function(d) { return 'export '+d.type});
                 labelHeight = fontSizeInterpolater((data.amount-minImExAmount)/(maxImExAmount-minImExAmount));
                 labelBGYPos = -labelHeight;
@@ -747,9 +747,9 @@ var d3Graphs = {
                     return fontSizeInterpolater((d.amount-minImExAmount)/(maxImExAmount - minImExAmount));
                 }).attr('y',-7);
                 var textLabel = exportLabel.append('text').text(function(d) {
-                    return exportReverseWeaponLookup[d.type].split(' ')[0].toUpperCase();
+                    return exportReverseWeaponLookup[d.type].split('X')[0].toUpperCase();
                 }).attr('text-anchor','start').attr('y',8).attr('class',function(d) { return 'export '+d.type});
-                var weaponLabel  =exportLabel.append('text').text('WEAPONS').attr('text-anchor','start').attr('y',21)
+                var weaponLabel  =exportLabel.append('text').text('').attr('text-anchor','start').attr('y',21)
                     .attr('class',function(d) { return'export '+d.type} );
                 labelHeight = fontSizeInterpolater((data.amount-minImExAmount)/(maxImExAmount-minImExAmount));
                 labelBGYPos = -labelHeight - 7;

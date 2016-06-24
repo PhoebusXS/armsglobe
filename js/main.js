@@ -65,7 +65,7 @@ var weaponLookup = {
 var exportWeaponLookup = {
 	'Intrusion'             : 'mil',
 	'Malware'               : 'civ',
-	'Probes'                : 'ammo',
+	'Probe'                 : 'ammo',
 };
 
 var importWeaponLookup = {
@@ -321,7 +321,7 @@ function initScene() {
 
 	buildGUI();
 
-	selectVisualization( timeBins, '2010', ['SINGAPORE'], ['Intrusion','Malware', 'Probes'], ['DoS','Investigation', 'Improper Usage'] );					
+	selectVisualization( timeBins, '2010', ['SINGAPORE'], ['Intrusion','Malware', 'Probe'], ['DoS','Investigation', 'Improper Usage'] );					
 
 		// test for highlighting specific countries
 	// highlightCountry( ["United States", "Switzerland", "China"] );
