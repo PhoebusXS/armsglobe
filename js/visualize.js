@@ -79,8 +79,10 @@ function getVisualizedMesh( linearData, year, countries, exportCategories, impor
 		var useExporter = relevantExport;
 		var useImporter = relevantImport;
 
-		var categoryName = reverseWeaponLookup[set.wc];
+		// var categoryName = reverseWeaponLookup[set.wc];
+		var categoryName = exportReverseWeaponLookup[set.wc];
 		var relevantExportCategory = relevantExport && $.inArray(categoryName,exportCategories) >= 0;		
+		var categoryName = importReverseWeaponLookup[set.wc];
 		var relevantImportCategory = relevantImport && $.inArray(categoryName,importCategories) >= 0;		
 
 		if( (useImporter || useExporter) && (relevantExportCategory || relevantImportCategory) ){

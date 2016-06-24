@@ -62,13 +62,39 @@ var weaponLookup = {
 	'Ammunition'			: 'ammo',
 };
 
+var exportWeaponLookup = {
+	'Intrusion'             : 'mil',
+	'Malware'               : 'civ',
+	'Probes'                : 'ammo',
+};
+
+var importWeaponLookup = {
+	'DoS'                   : 'mil',
+	'Investigation'         : 'civ',
+	'Improper Usage'        : 'ammo',
+};
+
 //	a list of the reverse for easy lookup
 var reverseWeaponLookup = new Object();
 for( var i in weaponLookup ){
 	var name = i;
 	var code = weaponLookup[i];
 	reverseWeaponLookup[code] = name;
+}	 
+
+var exportReverseWeaponLookup = new Object();
+for( var i in exportWeaponLookup ){
+	var name = i;
+	var code = exportWeaponLookup[i];
+	exportReverseWeaponLookup[code] = name;
 }	    	
+
+var importReverseWeaponLookup = new Object();
+for( var i in importWeaponLookup ){
+	var name = i;
+	var code = importWeaponLookup[i];
+	importReverseWeaponLookup[code] = name;
+}	    	   	
 
 //	A list of category colors
 var categoryColors = {
@@ -140,10 +166,13 @@ var Selection = function(){
 
 	this.exportCategories = new Object();
 	this.importCategories = new Object();
-	for( var i in weaponLookup ){
+	for( var i in exportWeaponLookup ){
 		this.exportCategories[i] = true;
+	}				
+	for( var i in importWeaponLookup ){
 		this.importCategories[i] = true;
 	}				
+
 
 	this.getExportCategories = function(){
 		var list = [];
@@ -292,7 +321,7 @@ function initScene() {
 
 	buildGUI();
 
-	selectVisualization( timeBins, '2010', ['SINGAPORE'], ['Military Weapons','Civilian Weapons', 'Ammunition'], ['Military Weapons','Civilian Weapons', 'Ammunition'] );					
+	selectVisualization( timeBins, '2010', ['SINGAPORE'], ['Intrusion','Malware', 'Probes'], ['DoS','Investigation', 'Improper Usage'] );					
 
 		// test for highlighting specific countries
 	// highlightCountry( ["United States", "Switzerland", "China"] );
@@ -521,12 +550,13 @@ function getHistoricalData( country ){
 		var value = {imports: 0, exports:0};
 		for( var s in yearBin ){
 			var set = yearBin[s];
-			var categoryName = reverseWeaponLookup[set.wc];
+			var importCategoryName = importReverseWeaponLookup[set.wc];
+			var exportCategoryName = exportReverseWeaponLookup[set.wc];
 
 			var exporterCountryName = set.e.toUpperCase();
 			var importerCountryName = set.i.toUpperCase();			
-			var relevantCategory = ( countryName == exporterCountryName && $.inArray(categoryName, exportCategories ) >= 0 ) || 
-								   ( countryName == importerCountryName && $.inArray(categoryName, importCategories ) >= 0 );				
+			var relevantCategory = ( countryName == exporterCountryName && $.inArray(exportCategoryName, exportCategories ) >= 0 ) || 
+								   ( countryName == importerCountryName && $.inArray(importCategoryName, importCategories ) >= 0 );				
 
 			if( relevantCategory == false )
 				continue;
