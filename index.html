@@ -11,7 +11,7 @@
 	<body onload="start()" id="dataviz" class="">
 		<div id="wrapper">
 		<div id="loading">
-			<h2>Loading raw malicious traffic logs. Please wait...</h2>
+			<h2>Loading collected traffic logs. Please wait...</h2>
 		</div>
 
 		<div >
@@ -142,17 +142,17 @@
 		<!-- All other hud can go here-->
         <div id="hudHeader" class="overlayCountries noPointer">
             <h1 class="noPointer">Customer Threat Map
-                <div class="subtitle">An interactive visualization of incoming malicious traffic.</div>
+                <div class="subtitle">An interactive visualization of analysed suspicious traffic.</div>
 			</h1>
         </div>
 
 		<div class="overlayCountries noPointer" id="hudButtons">
-            <input type="button" value="SEARCH" class="searchBtn armsBtn pointer">
+            <input type="button" value="GO&nbsp;TO" class="searchBtn armsBtn pointer">
             <input type="text" name="country" class="countryTextInput pointer noMapDrag" value="SINGAPORE">
             <!-- <input type="button" value="—" class="zoomBtn zoomOutBtn armsBtn pointer noMapDrag"> -->
             <!-- <input type="button" value="+" class="zoomBtn zoomInBtn armsBtn pointer noMapDrag"> -->
         </div>
-        <div id="history" class="overlayCountries noPointer">
+        <div id="history" class="overlayCountries noPointer" style="visibility: hidden">
             <div class="graph">
                 <div class="close"></div>
                 <div class="labels">
@@ -185,12 +185,12 @@
                 <div id="handle" class="noMapDrag"></div>
             </ul>
         </div>
-        <div id="graphIcon" class="overlayCountries"></div>
+        <div id="graphIcon" class="overlayCountries" style="visibility: hidden"></div>
         <div id="importExportBtns" class="overlayCountries">
             <div class="typeLabels">
                 <div class="mil">DoS</div>
                 <div class="civ">Investigation</div>
-                <div class="ammo">Improper Usage</div><br class="clear">
+                <div class="ammo">Improper&nbsp;Usage</div><br class="clear">
             </div>
             <div class="imports imex">
                 <div class="mil"><div class="check"></div></div>
@@ -198,16 +198,16 @@
                 <div class="ammo"><div class="check"></div></div>
                 <div class="label">Alerts</div><br class="clear">
             </div>
-            <div class="typeLabelsAlt">
-                <div class="mil">Intrusion</div>
-                <div class="civ">Malware</div>
-                <div class="ammo">Probes</div><br class="clear">
-            </div>
             <div class="exports imex">
                 <div class="mil"><div class="check"></div></div>
                 <div class="civ"><div class="check"></div></div>
                 <div class="ammo"><div class="check"></div></div>
                 <div class="label">Attacks</div><br class="clear">
+            </div>
+            <div class="typeLabelsAlt">
+                <div class="mil">Intrusion</div>
+                <div class="civ">Malware</div>
+                <div class="ammo">Probes</div><br class="clear">
             </div>
 <!--             <div class="typeLabelsReverse">
                 <div class="mil">Malware</div>

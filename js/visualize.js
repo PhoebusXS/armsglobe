@@ -17,14 +17,21 @@ function buildDataVizGeometries( linearData ){
 			var importerName = set.i.toUpperCase();
 
 			exporter = countryData[exporterName];
-			importer = countryData[importerName];	
+			importer = countryData[importerName];
 			
 			//	we couldn't find the country, it wasn't in our list...
 			if( exporter === undefined || importer === undefined )
 				continue;			
 
 			//	visualize this event
-			set.lineGeometry = makeConnectionLineGeometry( exporter, importer, set.v, set.wc );		
+			// set.lineGeometry = makeConnectionLineGeometry( exporter, importer, set.v, set.wc );
+			if (exporterName === 'SINGAPORE') {
+				set.lineGeometry = makeConnectionLineGeometry( importer, exporter, set.v, set.wc );
+			} else if (importerName === 'SINGAPORE') {
+				set.lineGeometry = makeConnectionLineGeometry( exporter, importer, set.v, set.wc );
+			} else {
+				set.lineGeometry = makeConnectionLineGeometry( exporter, importer, set.v, set.wc );
+			}
 
 			// if( s % 1000 == 0 )
 			// 	console.log( 'calculating ' + s + ' of ' + yearBin.length + ' in year ' + year);
@@ -279,7 +286,8 @@ function selectVisualization( linearData, year, countries, exportCategories, imp
 	//	we're only doing one country for now so...
 	var cName = countries[0].toUpperCase();
 	
-	$("#hudButtons .countryTextInput").val(cName);
+	// $("#hudButtons .countryTextInput").val(cName);
+	$("#hudButtons .countryTextInput").val('SINGAPORE');
 	previouslySelectedCountry = selectedCountry;
 	selectedCountry = countryData[countries[0].toUpperCase()];
     

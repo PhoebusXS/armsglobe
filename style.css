@@ -258,12 +258,12 @@ Elements to control the title and country selector
     font-size:              18px;
     color:                  white;
     background:             #333;
-    width:                  301px;
+    width:                  120px;
 }
 .ui-autocomplete #ui-active-menuitem {
     background:             white;
     color:                  black;
-    width:                  301px;
+    width:                  120px;
     display:                block;
     margin-left:            -4px;
     padding-left:           4px;
@@ -446,13 +446,13 @@ Bar graph on left
     font-family:            'Roboto';
     font-size:              13px;
     text-transform:         uppercase;
-    margin-bottom:-12px;
+    margin-bottom:			-12px;
 }
 #importExportBtns .typeLabelsAlt div {
     font-family:            'Roboto';
     font-size:              13px;
     text-transform:         uppercase;
-    margin-bottom:-12px;
+    margin-top:				1px;
 }
 
 #importExportBtns .imex>div {
@@ -464,14 +464,14 @@ Bar graph on left
 }
 #importExportBtns>div>.label {
     width:              98px;
-    height:             25px;
+    height:             28px;
     text-transform:     uppercase;
     font-family:        'Roboto';
     font-size:          18px;
-    margin-left:        10px;
+    margin-left:        3px;
     background:         #262626;
     vertical-align:     middle;
-    padding-top:        3px;
+    /*padding-top:        3px;*/
 }
 #importExportBtns .imports .label {
     color:              #44B2D4;
@@ -480,10 +480,10 @@ Bar graph on left
     color:              #FFA90B;
 }
 #importExportBtns .imports {
-    margin-bottom:      5px;
+    margin-bottom:      3px;
 }
 #importExportBtns .mil, #importExportBtns .civ {
-    margin-right:       5px;
+    margin-right:       3px;
 }
 #importExportBtns .imex .check {
     width: 16px;
@@ -588,7 +588,9 @@ Bar graph on left
 
 
 /* Small size */
-@media all and (max-width: 1800px) {
+@media all and (max-width: 1px) {
+    /* max-width with time line: 1800 */
+
     #importExportBtns {
         width: 187px;
         bottom: 0;

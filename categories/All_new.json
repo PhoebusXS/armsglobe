@@ -1,0 +1,12 @@
+{
+	"timeBins":[
+		{
+			"data":[
+				{"i": "Indonesia", "wc": "mil", "e": "Singapore", "v": 160800},
+				{"i": "Singapore", "wc": "civ", "e": "Belgium", "v": 3044},
+				{"i": "Malawi", "wc": "ammo", "e": "Singapore", "v": 1547}
+			],
+			"t": 2010
+		}
+	]
+}

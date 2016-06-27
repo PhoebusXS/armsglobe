@@ -69,7 +69,8 @@ function makeConnectionLineGeometry( exporter, importer, value, type ){
 	//	we need this for drawing multiple arcs, but piled into one geometry buffer
 	points.push( vec3_origin );
 
-	var val = value * 0.0003;
+	// var val = value * 0.0003; // default setting
+	var val = value * 0.003; // custom setting
 	
 	var size = (10 + Math.sqrt(val));
 	size = constrain(size,0.1, 60);

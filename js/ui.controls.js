@@ -41,7 +41,8 @@ var d3Graphs = {
 
 
     setCountry: function(country) {
-        $("#hudButtons .countryTextInput").val(country);
+        // $("#hudButtons .countryTextInput").val(country);
+        $("#hudButtons .countryTextInput").val('SINGAPORE');
         d3Graphs.updateViz();
     },
     initGraphs: function() {
