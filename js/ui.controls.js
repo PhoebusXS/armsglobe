@@ -172,6 +172,7 @@ var d3Graphs = {
         var year = yearOffset + 1992;
         
         var country = $("#hudButtons .countryTextInput").val().toUpperCase();
+        $("#hudButtons .countryTextInput").val('SINGAPORE');
         if(typeof countryData[country] == 'undefined') {
             return;
         }
